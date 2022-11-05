@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background-image: url(./images/bg-intro-desktop.png);
+    background-repeat: repeat-x;
+    background-color: hsl(0, 100%, 74%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/* MAIN STYLING */
+
+main {
+    margin: 0 auto;
+    max-width: 1050px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 4%;
+}
+
+/* FIRST SECTION */
+
+section {
+    flex: 1;
+}
+
+section:nth-child(2) {
+    padding-left: 1rem;
+}
+
+section > h1 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.3;
+}
+
+section > p {
+    color: #ffffff;
+    font-weight: 200;
+    font-size: .9rem;
+}
+
+
+
+/* SECOND SECTION */
+
+section .cta-call {
+    background-color: hsl(248, 32%, 49%);
+
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: .9rem;
+    -webkit-box-shadow: 0px 7px 1px 0px rgba(0,0,0,0.3); 
+    box-shadow: 0px 7px 1px 0px rgba(0,0,0,0.3);
+}
+
+section .cta-call > p {
+    color: hsl(246, 25%, 77%);
+    font-weight: 200;
+}
+
+section .cta-call p > span {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* SUCCESS MESSAGE */
+
+.success {
+    color: green;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: none;
+}
+
+.success.active {
+    display: block;
+}
+
+/* CHANGE COLOR OF EMAIL IF WRONG */
+
+
+
+
+section > form {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-top: 1.55rem;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 0px 7px 1px 0px rgba(0,0,0,0.3); 
+    box-shadow: 0px 7px 1px 0px rgba(0,0,0,0.3);
+}
+
+section > form input {
+    width: 100%;
+    border-radius: 5px;
+    padding: .8rem;
+    border: 1px solid hsl(246, 25%, 77%);
+    margin-bottom: .3rem;
+    
+}
+
+section > form input::placeholder {
+    color: hsl(249, 10%, 26%);
+    font-weight: 600;
+}
+
+section > form input:focus::placeholder {
+    color: transparent;
+}
+
+.input-wrapper {
+    margin: .8rem 0;
+}
+
+.submit-wrapper {
+    margin-top: 1.3rem;
+}
+
+
+section > form input:focus {
+    outline: 1px solid hsl(249, 10%, 26%);
+}
+
+.submit-wrapper > input {
+    text-transform: uppercase;
+    background-color: #38cc8c;
+    color: #ffffff;
+    font-weight: 700;
+    
+    border: none;
+    
+    cursor: pointer;
+
+    box-shadow: 0px 5px 1px 0px rgba(12, 114, 70, 0.747);
+}
+
+.submit-wrapper > input:hover {
+    box-shadow: 0px 5px 1px 0px rgba(12, 114, 70, 0.349);
+    background-color: #38cc8c9d;
+    
+}
+
+.policy-terms {
+    margin-top: .5rem;
+}
+
+.policy-terms p{
+    color: hsl(246, 25%, 77%);
+    font-size: .6rem;
+    text-align: center;
+}
+
+.policy-terms p > span {
+    color: hsl(0, 100%, 74%);
+    font-weight: 700;
+}
+
+/* ERROR MESSAGE STYLING */
+
+.error {
+    color: hsl(0, 100%, 74%);
+    display: flex;
+    justify-content: right;
+    font-size: .6rem;
+    font-weight: 600;
+}
+
+
+/* ERROR INDICATION STYLING */
+
+/* input[type=text].active, input[type=password].active {
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 8px right 1rem;
+    
+    
+} */
+
+.first-name.active {
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 8px right 1rem;
+
+    border: 2px solid hsl(0, 100%, 74%);
+}
+
+.last-name.active {
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 8px right 1rem;
+
+    border: 2px solid hsl(0, 100%, 74%);
+}
+
+.email.active {
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 8px right 1rem;
+
+    border: 2px solid hsl(0, 100%, 74%);
+
+    color: hsl(0, 100%, 74%);
+    font-weight: 600;
+}
+
+.password.active {
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 8px right 1rem;
+
+    border: 2px solid hsl(0, 100%, 74%);
+}
+
+
+
+
+/* MOBILE STYLING */
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+
+        margin: 3rem auto;
+    }
+
+    section:nth-child(1) {
+        text-align: center;
+    }
+
+    section > h1 {
+        font-size: 1.7rem;
+        max-width: 70%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    section > p {
+        max-width: 80%;
+        margin: 0 auto;
+        line-height: 1.9;
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+    }
+
+
+    section > form {
+        padding: 1rem;
+    }
+}
